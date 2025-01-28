@@ -1,3 +1,5 @@
+# Prueba Plain Concepts
+
 ## Análisis y Procesamiento de Imágenes
 
 Este flujo de trabajo implementa un análisis y procesamiento de imágenes, abordando varias etapas clave.
