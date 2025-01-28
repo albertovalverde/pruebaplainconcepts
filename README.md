@@ -1,42 +1,34 @@
-# Image Analysis and Processing Project
+## Análisis y Procesamiento de Imágenes
 
-Este proyecto implementa un flujo de trabajo completo para el análisis de imágenes, incluyendo exploración, limpieza, preprocesamiento, extracción de características, y aumento de datos. También se utiliza para la detección de imágenes duplicadas y el cálculo de la similitud entre imágenes utilizando métricas como el Error Cuadrático Medio (MSE) y el Índice de Similitud Estructural (SSIM).
+Este flujo de trabajo implementa un análisis y procesamiento de imágenes, abordando varias etapas clave.
 
-## Requerimientos
+### 1. Análisis Exploratorio
 
-Este proyecto requiere las siguientes bibliotecas de Python, que pueden ser instaladas con el archivo `requirements.txt`:
+- Se cargan imágenes desde un directorio, se verifica que todas estén correctamente cargadas, y se visualizan en una cuadrícula.
+- Se generan histogramas de color para cada imagen para evaluar la distribución de los valores de los canales RGB.
 
-- TensorFlow
-- Keras
-- OpenCV
-- NumPy
-- Matplotlib
-- scikit-image
+###  2. Técnicas de Limpieza
 
-Puedes instalar todas las dependencias necesarias ejecutando el siguiente comando:
+- Se verifica si las imágenes están corruptas.
+- Se utilizan medidas como el Structural Similarity Index (SSIM) para detectar imágenes duplicadas basándose en la similitud estructural.
 
-```bash
-pip install -r requirements.txt
+###  3. Preprocesamiento y Aumento de Datos
 
-Image-Analysis-Project/
-│
-├── circuits/                 # Directorio donde se guardan las imágenes procesadas
-├── requirements.txt          # Archivo con las dependencias necesarias
-├── image_analysis.py         # Script principal para el análisis de imágenes
-└── README.md                 # Este archivo
+- Se redimensionan y normalizan las imágenes.
+- Se aplica un generador de aumento de datos para introducir variaciones en las imágenes mediante transformaciones aleatorias (rotación, desplazamiento, zoom, etc.).
 
-Flujo de Trabajo
-1. Exploración de Datos
-Se cargan las imágenes desde el directorio /circuits y se realizan análisis exploratorios como el cálculo de histogramas de colores.
+###  4. Extracción de Características y Detección
 
-2. Técnicas de Limpieza
-Se verifican las imágenes corruptas y se detectan duplicados utilizando el Índice de Similitud Estructural (SSIM).
+- Se utiliza el modelo preentrenado VGG16 para la extracción de características.
+- También se realiza un análisis de textura mediante el filtro Sobel, destacando bordes en las imágenes.
 
-3. Preprocesamiento y Aumento de Datos
-Las imágenes se redimensionan y normalizan, y luego se aplican técnicas de aumento de datos (rotaciones, traslaciones, etc.) para generar más variaciones de las imágenes originales.
+###  5. Métricas
 
-4. Extracción de Características y Detección
-Se extraen características de las imágenes utilizando técnicas de procesamiento de imágenes como la detección de bordes y el cálculo de similitudes entre imágenes usando MSE y SSIM.
+- Se calcula el error cuadrático medio (MSE) entre las imágenes preprocesadas para comparar similitudes.
 
-5. Resultados y Visualización
-Se calcula la similitud entre las imágenes y se muestran los resultados a través de métricas y visualizaciones como gráficos de los histogramas de colores.
+###  6. Despliegue
+
+- Se ha creado un servidor Flask para recibir nuevas imágenes y añadirlas a la base de datos, además de realizar predicciones con el modelo VGG16.
+- La ruta `/predict` permite que los usuarios suban una imagen para obtener una predicción.
+
+Este flujo de trabajo cubre desde la carga de imágenes hasta la implementación de un modelo para análisis predictivo, con un enfoque en la limpieza y el preprocesamiento de los datos.
