@@ -30,7 +30,7 @@ Este flujo de trabajo implementa un análisis y procesamiento de imágenes, abor
 
 ###  6. Despliegue
 
-- Se ha creado un servidor Flask para recibir nuevas imágenes y añadirlas a la base de datos, además de realizar predicciones con el modelo VGG16.
+- Se ha creado un servidor Flask para recibir nuevas imágenes y añadirlas al directorio, además de realizar predicciones con el modelo VGG16.
 - La ruta `/predict` permite que los usuarios suban una imagen para obtener una predicción.
 
 Este flujo de trabajo cubre desde la carga de imágenes hasta la implementación de un modelo para análisis predictivo, con un enfoque en la limpieza y el preprocesamiento de los datos.
