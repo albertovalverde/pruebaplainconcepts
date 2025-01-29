@@ -69,7 +69,7 @@ Este código está diseñado para predecir las clases de circuitos, como resisto
 Una vez que hayas entrenado el modelo y guardado los pesos en el archivo `circuitsModel.pth`, puedes usar el script `predict.py` para realizar predicciones sobre nuevas imágenes.
 
 ### Instrucciones:
-1. Asegúrate de que el archivo `circuitsModel.pth` esté en el mismo directorio que el script `predict.py`.
+1. Asegúrate de que el archivo `circuitsModel.pth`.
 2. Coloca la imagen que deseas clasificar en el directorio de tu elección y actualiza la variable `image_path` en `predict.py` con la ruta de la imagen.
 3. Ejecuta `predict.py` para obtener la clase predicha para la imagen.
 
