@@ -64,7 +64,7 @@ El archivo `torchtraining.py` se encarga del preprocesamiento de las imágenes, 
 Este código está diseñado para predecir las clases de circuitos, como resistores, transistores y capacitores, mediante un modelo de red neuronal.
 
 
-## Predicción con el modelo entrenado 'predict.py'
+## Predicción con el modelo entrenado `predict.py`
 
 Una vez que hayas entrenado el modelo y guardado los pesos en el archivo `circuitsModel.pth`, puedes usar el script `predict.py` para realizar predicciones sobre nuevas imágenes.
 
