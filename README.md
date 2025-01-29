@@ -1,6 +1,6 @@
 # Prueba Plain Concepts
 
-## Análisis y Procesamiento de Imágenes
+## Análisis y Procesamiento de Imágenes `Analisis_Procesamiento_Imagenes.ipynb`
 
 Este flujo de trabajo implementa un análisis y procesamiento de imágenes, abordando varias etapas clave.
 
